@@ -4,7 +4,10 @@ const { Server } = require("socket.io");
 const httpServer = createServer();
 const io = new Server(httpServer, {
 	cors: {
-		origin: "http://creem:8888"
+        origin: [
+            "http://creem:8888",
+            "https://staging.thinline.be",
+        ],
 	}
 });
 
